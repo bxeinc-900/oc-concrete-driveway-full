@@ -1,0 +1,72 @@
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
+const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: "OC Concrete Driveway | Top Concrete Contractor Orange County & Riverside",
+  description: "Durable and beautiful concrete driveways, patios, and pavers in Orange County and Riverside. Licensed and bonded with over 20 years of experience.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "OC Concrete Driveway",
+    "alternateName": "OC Concrete Driveway & Patio",
+    "description": "Top-rated concrete driveway contractor in Orange County and Riverside. Specializing in driveway replacement, stamped concrete, and patio installation.",
+    "url": "https://occoncretedriveway.com",
+    "telephone": "+19097872400",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoShape",
+      "region": "California",
+      "address": "Orange County and Riverside"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "07:00",
+      "closes": "18:00"
+    },
+    "sameAs": [
+      "https://www.facebook.com/occoncretedriveways",
+      "https://www.instagram.com/oc_concretedriveway"
+    ]
+  };
+
+  return (
+    <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+      <body className={`${inter.className} antialiased`}>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+      </body>
+    </html>
+  );
+}

@@ -25,6 +25,22 @@ export default function ContactPage() {
 
             <section className="py-24">
                 <div className="section-container px-4 grid grid-cols-1 lg:grid-cols-2 gap-24">
+                    {/* Booking Widget Column */}
+                    <div>
+                        <div className="bg-slate-900/40 p-1.5 md:p-4 rounded-[4rem] shadow-2xl border border-white/5 min-h-[700px]">
+                            <div className="bg-white/5 backdrop-blur-3xl rounded-[3.5rem] p-8 md:p-12 h-full">
+                                <h2 className="text-3xl font-black text-white uppercase mb-12 leading-tight tracking-tight italic">Schedule Your <span className="text-primary not-italic">On-Site Estimate</span></h2>
+                                <iframe
+                                    src="https://link.betterautomate.com/widget/booking/CGU2aayv2pnJ0CWUfL4O"
+                                    style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '600px' }}
+                                    scrolling="no"
+                                    id="CGU2aayv2pnJ0CWUfL4O_1772577084477"
+                                ></iframe>
+                                <Script src="https://link.betterautomate.com/js/form_embed.js" type="text/javascript" />
+                            </div>
+                        </div>
+                    </div>
+
                     {/* Information Column */}
                     <div className="space-y-16">
                         <div>
@@ -68,22 +84,6 @@ export default function ContactPage() {
                                     <span className="text-primary italic">Closed</span>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-
-                    {/* Booking Widget Column */}
-                    <div>
-                        <div className="bg-slate-900/40 p-1.5 md:p-4 rounded-[4rem] shadow-2xl border border-white/5 min-h-[700px]">
-                            <div className="bg-white/5 backdrop-blur-3xl rounded-[3.5rem] p-8 md:p-12 h-full">
-                                <h2 className="text-3xl font-black text-white uppercase mb-12 leading-tight tracking-tight italic">Schedule Your <span className="text-primary not-italic">On-Site Estimate</span></h2>
-                                <iframe
-                                    src="https://link.betterautomate.com/widget/booking/CGU2aayv2pnJ0CWUfL4O"
-                                    style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '600px' }}
-                                    scrolling="no"
-                                    id="CGU2aayv2pnJ0CWUfL4O_1772577084477"
-                                ></iframe>
-                                <Script src="https://link.betterautomate.com/js/form_embed.js" type="text/javascript" />
-                            </div>
                         </div>
                     </div>
                 </div>

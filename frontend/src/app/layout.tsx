@@ -7,8 +7,32 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "OC Concrete Driveway | Top Concrete Contractor Orange County & Riverside",
+  metadataBase: new URL("https://occoncretedriveway.com"),
+  title: {
+    default: "OC Concrete Driveway | Top Concrete Contractor Orange County & Riverside",
+    template: "%s | OC Concrete Driveway"
+  },
   description: "Durable and beautiful concrete driveways, patios, and pavers in Orange County and Riverside. Licensed and bonded with over 20 years of experience.",
+  keywords: ["concrete driveway orange county", "concrete contractor riverside", "stamped concrete", "pavers", "driveway replacement CA"],
+  openGraph: {
+    title: "OC Concrete Driveway",
+    description: "Expert concrete driveway, patio, and hardscaping services in Southern California.",
+    url: "https://occoncretedriveway.com",
+    siteName: "OC Concrete Driveway",
+    locale: "en_US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({

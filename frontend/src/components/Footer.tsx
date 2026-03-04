@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
     return (
@@ -6,22 +7,27 @@ const Footer = () => {
             <div className="section-container grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-12">
                 {/* Brand */}
                 <div className="space-y-4">
-                    <Link href="/" className="flex items-center space-x-2">
-                        <div className="bg-primary p-2 rounded-lg text-white font-black text-xl">OC</div>
-                        <span className="font-black text-2xl tracking-tighter italic">CONCRETE</span>
+                    <Link href="/" className="inline-block relative">
+                        <Image
+                            src="/OC-Concrete-driveway_official-300x86.png"
+                            alt="OC Concrete Driveway Logo"
+                            width={240}
+                            height={68}
+                            className="h-10 md:h-12 w-auto object-contain brightness-0 invert"
+                        />
                     </Link>
                     <p className="text-slate-400 leading-relaxed">
                         Premium concrete driveway and patio solutions in Orange County and Riverside. Over 20 years of excellence.
                     </p>
-                    <div className="flex space-x-4">
-                        <a href="https://www.facebook.com/occoncretedriveways" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-slate-800 flex items-center justify-center rounded-full hover:bg-primary transition-colors">
+                    <div className="flex space-x-4 relative z-20">
+                        <Link href="https://www.facebook.com/occoncretedriveways" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-slate-800 flex items-center justify-center rounded-full hover:bg-primary transition-colors cursor-pointer">
                             <span className="sr-only">Facebook</span>
-                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" /></svg>
-                        </a>
-                        <a href="https://www.instagram.com/oc_concretedriveway" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-slate-800 flex items-center justify-center rounded-full hover:bg-primary transition-colors">
+                            <svg className="w-5 h-5 pointer-events-none" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" /></svg>
+                        </Link>
+                        <Link href="https://www.instagram.com/oc_concretedriveway" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-slate-800 flex items-center justify-center rounded-full hover:bg-primary transition-colors cursor-pointer">
                             <span className="sr-only">Instagram</span>
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01" /></svg>
-                        </a>
+                            <svg className="w-5 h-5 pointer-events-none" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01" /></svg>
+                        </Link>
                     </div>
                 </div>
 

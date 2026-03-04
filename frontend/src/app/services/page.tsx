@@ -38,9 +38,10 @@ export default function ServicesPage() {
     return (
         <div className="bg-slate-950 text-slate-300 min-h-screen">
             {/* Header */}
-            <section className="relative py-32 overflow-hidden">
-                <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-3xl" />
-                <div className="section-container relative z-10 px-4">
+            <section className="relative py-32 md:py-48 overflow-hidden min-h-[50vh] flex flex-col justify-center">
+                <Image src="/images/Concrete driveway and patio in Riverside.jpg" alt="Our Concrete Services" fill className="object-cover" priority />
+                <div className="absolute inset-0 bg-slate-950/70" />
+                <div className="section-container relative z-10 px-4 w-full">
                     <span className="text-primary font-bold uppercase tracking-[0.3em] text-xs mb-4 block text-center md:text-left">Precision Engineering</span>
                     <h1 className="text-6xl md:text-8xl font-black mb-8 text-white uppercase tracking-tighter italic text-center md:text-left">Our <span className="text-primary not-italic">Services</span></h1>
                     <p className="text-xl md:text-2xl text-slate-400 max-w-2xl leading-relaxed font-light text-center md:text-left mx-auto md:mx-0">

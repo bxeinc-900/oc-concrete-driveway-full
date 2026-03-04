@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -68,9 +69,11 @@ export default async function CityPage({ params }: Props) {
     return (
         <div className="flex flex-col items-center min-h-screen bg-slate-950 text-slate-300">
             {/* Hero Section */}
-            <section className="w-full bg-slate-900/50 border-b border-slate-800 py-32 px-6 text-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent opacity-50" />
-                <div className="section-container relative z-10">
+            <section className="w-full py-32 md:py-48 px-6 text-center relative overflow-hidden min-h-[50vh] flex flex-col justify-center">
+                <Image src="/images/concrete-driveway-replacement-orange-county.jpg" alt={`${cityName} Concrete Services`} fill className="object-cover" priority />
+                <div className="absolute inset-0 bg-slate-950/70" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent opacity-50" />
+                <div className="section-container relative z-10 w-full">
                     <span className="text-primary font-bold uppercase tracking-[0.3em] text-xs mb-6 block animate-fade-in">
                         Premier Concrete Contractor in {cityName}
                     </span>

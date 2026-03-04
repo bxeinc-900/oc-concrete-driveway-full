@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -22,9 +23,10 @@ export default function PortfolioPage() {
     return (
         <div className="bg-slate-950 min-h-screen text-slate-300">
             {/* Hero Section */}
-            <section className="relative py-32 overflow-hidden">
-                <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-3xl" />
-                <div className="section-container relative z-10 px-4">
+            <section className="relative py-32 md:py-48 overflow-hidden min-h-[50vh] flex flex-col justify-center">
+                <Image src="/images/concrete-patio-fire-pit-stamped-concrete.jpg" alt="Our Work Portfolio" fill className="object-cover" priority />
+                <div className="absolute inset-0 bg-slate-950/70" />
+                <div className="section-container relative z-10 px-4 w-full">
                     <span className="text-primary font-bold uppercase tracking-[0.3em] text-xs mb-4 block">Proof of Excellence</span>
                     <h1 className="text-6xl md:text-8xl font-black mb-8 text-white uppercase tracking-tighter italic">Our <span className="text-primary not-italic">Portfolio</span></h1>
                     <p className="text-xl md:text-2xl text-slate-400 max-w-2xl leading-relaxed font-light">

@@ -17,34 +17,35 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className={`glass-nav sticky top-0 z-50 w-full transition-all duration-300 ${scrolled ? "py-2 shadow-2xl" : "py-4"}`}>
+        <nav className={`bg-white border-b border-slate-200 sticky top-0 z-50 w-full transition-all duration-300 ${scrolled ? "py-2 shadow-sm" : "py-4"}`}>
             <div className="section-container flex justify-between items-center">
-                {/* Desktop Menu - Now on the left */}
-                <div className="hidden md:flex items-center space-x-8 order-1">
-                    <Link href="/" className="font-semibold text-slate-300 hover:text-primary transition-colors">Home</Link>
-                    <Link href="/services" className="font-semibold text-slate-300 hover:text-primary transition-colors">Services</Link>
-                    <Link href="/portfolio" className="font-semibold text-slate-300 hover:text-primary transition-colors">Portfolio</Link>
-                    <Link href="/about" className="font-semibold text-slate-300 hover:text-primary transition-colors">About</Link>
-                </div>
 
-                {/* Logo - Now on the right for desktop */}
-                <Link href="/" className="flex items-center md:order-2">
+                {/* Logo - Left */}
+                <Link href="/" className="flex items-center">
                     <Image
                         src="/OC-Concrete-driveway_official-300x86.png"
                         alt="OC Concrete Driveway Logo"
                         width={240}
                         height={68}
-                        className="h-12 md:h-14 w-auto object-contain brightness-110"
+                        className="h-12 md:h-14 w-auto object-contain"
                         priority
                     />
                 </Link>
 
-                {/* Mobile Toggle & CTA */}
-                <div className="flex items-center space-x-4 md:order-3">
+                {/* Desktop Menu - Center */}
+                <div className="hidden md:flex items-center space-x-8">
+                    <Link href="/" className="font-semibold text-black hover:text-primary transition-colors">Home</Link>
+                    <Link href="/services" className="font-semibold text-black hover:text-primary transition-colors">Services</Link>
+                    <Link href="/portfolio" className="font-semibold text-black hover:text-primary transition-colors">Portfolio</Link>
+                    <Link href="/about" className="font-semibold text-black hover:text-primary transition-colors">About</Link>
+                </div>
+
+                {/* Mobile Toggle & CTA - Right */}
+                <div className="flex items-center space-x-4">
                     <Link href="/contact" className="hidden md:block btn-primary px-6 py-2">Get a Quote</Link>
 
                     <button
-                        className="md:hidden p-2 text-white"
+                        className="md:hidden p-2 text-black"
                         onClick={() => setIsOpen(!isOpen)}
                     >
                         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,11 +61,11 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden bg-slate-900 border-b border-slate-800 py-6 px-4 space-y-4 animate-in slide-in-from-top duration-300">
-                    <Link href="/" onClick={() => setIsOpen(false)} className="block font-semibold text-slate-300">Home</Link>
-                    <Link href="/services" onClick={() => setIsOpen(false)} className="block font-semibold text-slate-300">Services</Link>
-                    <Link href="/portfolio" onClick={() => setIsOpen(false)} className="block font-semibold text-slate-300">Portfolio</Link>
-                    <Link href="/about" onClick={() => setIsOpen(false)} className="block font-semibold text-slate-300">About</Link>
+                <div className="md:hidden bg-white border-b border-slate-200 py-6 px-4 space-y-4 animate-in slide-in-from-top duration-300 shadow-xl">
+                    <Link href="/" onClick={() => setIsOpen(false)} className="block font-semibold text-black">Home</Link>
+                    <Link href="/services" onClick={() => setIsOpen(false)} className="block font-semibold text-black">Services</Link>
+                    <Link href="/portfolio" onClick={() => setIsOpen(false)} className="block font-semibold text-black">Portfolio</Link>
+                    <Link href="/about" onClick={() => setIsOpen(false)} className="block font-semibold text-black">About</Link>
                     <Link href="/contact" onClick={() => setIsOpen(false)} className="block btn-primary text-center">Get a Quote</Link>
                 </div>
             )}

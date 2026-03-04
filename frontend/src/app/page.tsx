@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Script from "next/script";
 
 export default function Home() {
   return (
@@ -145,6 +146,17 @@ export default function Home() {
             <Link href="/about" className="btn-outline inline-flex mt-4">
               Meet Anthony & Brian
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews Widget Section */}
+      <section className="py-24 bg-slate-900 border-y border-slate-800">
+        <div className="section-container px-4">
+          <h2 className="text-4xl md:text-5xl font-black text-white text-center mb-16 uppercase tracking-tight italic">What Our <span className="text-primary not-italic">Clients Say</span></h2>
+          <div className="w-full">
+            <iframe className="lc_reviews_widget" src="https://reputationhub.site/reputation/widgets/review_widget/op0ixUwAI21CUvFJw2qS" frameBorder="0" scrolling="no" style={{ minWidth: '100%', width: '100%' }}></iframe>
+            <Script src="https://reputationhub.site/reputation/assets/review-widget.js" strategy="lazyOnload" />
           </div>
         </div>
       </section>
